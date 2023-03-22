@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ModularMonolith.Modules.Conferences.Api/1.0.0": {
+        "dependencies": {
+          "ModularMonolith.Modules.Conferences.Core": "1.0.0",
+          "ModularMonolith.Shared.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "ModularMonolith.Modules.Conferences.Api.dll": {}
+        }
+      },
+      "ModularMonolith.Modules.Conferences.Core/1.0.0": {
+        "runtime": {
+          "ModularMonolith.Modules.Conferences.Core.dll": {}
+        }
+      },
+      "ModularMonolith.Shared.Infrastructure/1.0.0": {
+        "runtime": {
+          "ModularMonolith.Shared.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ModularMonolith.Modules.Conferences.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ModularMonolith.Modules.Conferences.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ModularMonolith.Shared.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

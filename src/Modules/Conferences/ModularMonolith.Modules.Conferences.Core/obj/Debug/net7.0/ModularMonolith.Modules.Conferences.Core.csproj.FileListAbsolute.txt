@@ -1,0 +1,12 @@
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\bin\Debug\net7.0\ModularMonolith.Modules.Conferences.Core.deps.json
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\bin\Debug\net7.0\ModularMonolith.Modules.Conferences.Core.dll
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\bin\Debug\net7.0\ModularMonolith.Modules.Conferences.Core.pdb
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\obj\Debug\net7.0\ModularMonolith.Modules.Conferences.Core.csproj.AssemblyReference.cache
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\obj\Debug\net7.0\ModularMonolith.Modules.Conferences.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\obj\Debug\net7.0\ModularMonolith.Modules.Conferences.Core.AssemblyInfoInputs.cache
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\obj\Debug\net7.0\ModularMonolith.Modules.Conferences.Core.AssemblyInfo.cs
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\obj\Debug\net7.0\ModularMonolith.Modules.Conferences.Core.csproj.CoreCompileInputs.cache
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\obj\Debug\net7.0\ModularMonolith.Modules.Conferences.Core.dll
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\obj\Debug\net7.0\refint\ModularMonolith.Modules.Conferences.Core.dll
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\obj\Debug\net7.0\ModularMonolith.Modules.Conferences.Core.pdb
+D:\test-projects\ModularMonolith\src\Modules\Conferences\ModularMonolith.Modules.Conferences.Core\obj\Debug\net7.0\ref\ModularMonolith.Modules.Conferences.Core.dll

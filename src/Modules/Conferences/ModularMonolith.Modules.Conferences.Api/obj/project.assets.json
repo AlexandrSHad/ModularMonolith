@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "ModularMonolith.Modules.Conferences.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ModularMonolith.Modules.Conferences.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ModularMonolith.Modules.Conferences.Core.dll": {}
+        }
+      },
+      "ModularMonolith.Shared.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ModularMonolith.Shared.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ModularMonolith.Shared.Infrastructure.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "ModularMonolith.Modules.Conferences.Core/1.0.0": {
+      "type": "project",
+      "path": "../ModularMonolith.Modules.Conferences.Core/ModularMonolith.Modules.Conferences.Core.csproj",
+      "msbuildProject": "../ModularMonolith.Modules.Conferences.Core/ModularMonolith.Modules.Conferences.Core.csproj"
+    },
+    "ModularMonolith.Shared.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../../Shared/ModularMonolith.Shared.Infrastructure/ModularMonolith.Shared.Infrastructure.csproj",
+      "msbuildProject": "../../../Shared/ModularMonolith.Shared.Infrastructure/ModularMonolith.Shared.Infrastructure.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "ModularMonolith.Modules.Conferences.Core >= 1.0.0",
+      "ModularMonolith.Shared.Infrastructure >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\SHad\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\test-projects\\ModularMonolith\\src\\Modules\\Conferences\\ModularMonolith.Modules.Conferences.Api\\ModularMonolith.Modules.Conferences.Api.csproj",
+      "projectName": "ModularMonolith.Modules.Conferences.Api",
+      "projectPath": "D:\\test-projects\\ModularMonolith\\src\\Modules\\Conferences\\ModularMonolith.Modules.Conferences.Api\\ModularMonolith.Modules.Conferences.Api.csproj",
+      "packagesPath": "C:\\Users\\SHad\\.nuget\\packages\\",
+      "outputPath": "D:\\test-projects\\ModularMonolith\\src\\Modules\\Conferences\\ModularMonolith.Modules.Conferences.Api\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\SHad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "D:\\test-projects\\ModularMonolith\\src\\Modules\\Conferences\\ModularMonolith.Modules.Conferences.Core\\ModularMonolith.Modules.Conferences.Core.csproj": {
+              "projectPath": "D:\\test-projects\\ModularMonolith\\src\\Modules\\Conferences\\ModularMonolith.Modules.Conferences.Core\\ModularMonolith.Modules.Conferences.Core.csproj"
+            },
+            "D:\\test-projects\\ModularMonolith\\src\\Shared\\ModularMonolith.Shared.Infrastructure\\ModularMonolith.Shared.Infrastructure.csproj": {
+              "projectPath": "D:\\test-projects\\ModularMonolith\\src\\Shared\\ModularMonolith.Shared.Infrastructure\\ModularMonolith.Shared.Infrastructure.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
