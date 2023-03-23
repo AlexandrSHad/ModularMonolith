@@ -9,7 +9,9 @@ public static class Extensions
 {
     public static IServiceCollection AddCore(this IServiceCollection services)
     {
+        services.AddScoped<IConferenceService, ConferenceService>();
         services.AddScoped<IHostService, HostService>();
+        services.AddSingleton<IConferenceRepository, InMemoryConferenceRepository>();
         services.AddSingleton<IHostRepository, InMemoryHostRepository>();
         
         return services;
