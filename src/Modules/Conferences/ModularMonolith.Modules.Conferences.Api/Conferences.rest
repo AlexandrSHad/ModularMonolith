@@ -1,6 +1,6 @@
 @url = http://localhost:5000/conferences-module
-@hostId = 6250feee-f46d-4db2-a681-61fabd316827
-@conferenceId = 0993f44f-5c28-47d6-a9a5-4928becfe5a4
+@hostId = d2cf6916-9685-4db5-8a40-b29e4a0f134d
+@conferenceId = 9d441c33-fe9d-460f-aacd-950ae697f974
 
 ###
 GET {{url}}

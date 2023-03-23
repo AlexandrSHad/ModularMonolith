@@ -32,7 +32,8 @@ internal class ConferenceService : IConferenceService
 
         dto.Id = Guid.NewGuid();
 
-        var conference = Map(dto);
+        var conference = new Conference();
+        Map(conference, dto);
         await _conferenceRepository.AddAsync(conference);
 
         _logger.LogInformation(
@@ -59,7 +60,7 @@ internal class ConferenceService : IConferenceService
         // use dedicated UpdateConferenceDto because of hostId that should not change after creation 
         var conference = await GetConferenceAsync(dto.Id);
 
-        conference = Map(dto);
+        Map(conference, dto);
         await _conferenceRepository.UpdateAsync(conference);
         
         _logger.LogInformation(
@@ -90,17 +91,16 @@ internal class ConferenceService : IConferenceService
         return conference;
     }
 
-    private static Conference Map(ConferenceDetailsDto dto)
-        => new Conference
-        {
-            Id = dto.Id,
-            HostId = dto.HostId,
-            Name = dto.Name,
-            Description = dto.Description,
-            Location = dto.Location,
-            From = dto.From,
-            To = dto.To
-        };
+    private static void Map(Conference conference, ConferenceDetailsDto dto)
+    {
+        conference.Id = dto.Id;
+        conference.HostId = dto.HostId;
+        conference.Name = dto.Name;
+        conference.Description = dto.Description;
+        conference.Location = dto.Location;
+        conference.From = dto.From;
+        conference.To = dto.To;
+    }
 
     private static T Map<T>(Conference conference) where T : ConferenceDto, new()
         => new T()
