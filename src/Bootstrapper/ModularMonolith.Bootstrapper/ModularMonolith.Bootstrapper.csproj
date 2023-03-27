@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Modules\Conferences\ModularMonolith.Modules.Conferences.Api\ModularMonolith.Modules.Conferences.Api.csproj" />
+    <ProjectReference Include="..\..\Modules\Speakers\ModularMonolith.Modules.Speakers.Api\ModularMonolith.Modules.Speakers.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>

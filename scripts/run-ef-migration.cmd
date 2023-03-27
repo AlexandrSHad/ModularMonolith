@@ -1,1 +1,2 @@
-dotnet ef migrations add Conferences_Module_init --startup-project ../../../Bootstrapper/ModularMonolith.Bootstrapper -o ./DAL/EF/Migrations
+dotnet ef migrations add Conferences_Module_init --startup-project ../../../Bootstrapper/ModularMonolith.Bootstrapper --context ConferencesDbContext -o ./DAL/EF/Migrations
+dotnet ef migrations add Speakers_Module_init --startup-project ../../../Bootstrapper/ModularMonolith.Bootstrapper --context SpeakersDbContext -o ./DAL/EF/Migrations

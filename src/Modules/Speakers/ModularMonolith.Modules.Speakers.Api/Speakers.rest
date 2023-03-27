@@ -1,0 +1,32 @@
+@url = http://localhost:5000/speakers-module
+@speakerId = 886F7D15-749E-4C2A-88A7-89E07F13BA70
+
+###
+GET {{url}}/speakers
+
+###
+GET {{url}}/speakers/{{speakerId}}
+
+###
+POST {{url}}/speakers
+Content-Type: application/json
+
+{
+    "id": "{{speakerId}}",
+    "fullName": "Speaker 1",
+    "email": "speaker1@mail.com",
+    "bio": "Bio of very cool Speaker 1",
+    "AvatarUrl": "https://avatar.com/ttt-rrr-ggg.png"
+}
+
+###
+PUT {{url}}/speakers/{{speakerId}}
+Content-Type: application/json
+
+{
+    "id": "{{speakerId}}",
+    "fullName": "Speaker 1 Upd",
+    "email": "speaker1-upd@mail.com",
+    "bio": "Bio of very cool Speaker 1 Upd",
+    "AvatarUrl": "https://avatar.com/v2/ttt-rrr-ggg.png"
+}

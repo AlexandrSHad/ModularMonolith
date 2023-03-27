@@ -27,6 +27,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Tests.EndTo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Bootstrapper", "src\Bootstrapper\ModularMonolith.Bootstrapper\ModularMonolith.Bootstrapper.csproj", "{DC06FA75-4661-4C7E-AE9F-F5FED0391495}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Speakers", "Speakers", "{98B2C3D8-7A8C-46E0-8E46-92AEDA6518C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Modules.Speakers.Api", "src\Modules\Speakers\ModularMonolith.Modules.Speakers.Api\ModularMonolith.Modules.Speakers.Api.csproj", "{4555FC88-C160-4471-BD72-3ADB831447E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Modules.Speakers.Core", "src\Modules\Speakers\ModularMonolith.Modules.Speakers.Core\ModularMonolith.Modules.Speakers.Core.csproj", "{8665CA8E-044B-46BF-A8B6-4CAFDC46DBA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +66,14 @@ Global
 		{DC06FA75-4661-4C7E-AE9F-F5FED0391495}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC06FA75-4661-4C7E-AE9F-F5FED0391495}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC06FA75-4661-4C7E-AE9F-F5FED0391495}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4555FC88-C160-4471-BD72-3ADB831447E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4555FC88-C160-4471-BD72-3ADB831447E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4555FC88-C160-4471-BD72-3ADB831447E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4555FC88-C160-4471-BD72-3ADB831447E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8665CA8E-044B-46BF-A8B6-4CAFDC46DBA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8665CA8E-044B-46BF-A8B6-4CAFDC46DBA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8665CA8E-044B-46BF-A8B6-4CAFDC46DBA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8665CA8E-044B-46BF-A8B6-4CAFDC46DBA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6A8CF716-45DC-45CA-A022-F329D64AFADE} = {A1685B24-E357-40AE-8EA5-D739D9BA4A66}
@@ -72,5 +86,8 @@ Global
 		{979D875E-3F29-41B3-BC07-200CF788889E} = {D9A6B3D8-720E-43AC-82D5-85794625823F}
 		{768A21E8-4628-421E-8406-16496DA6EB47} = {4FFDEDBB-5538-4584-911D-58187CF9C053}
 		{DC06FA75-4661-4C7E-AE9F-F5FED0391495} = {6A8CF716-45DC-45CA-A022-F329D64AFADE}
+		{98B2C3D8-7A8C-46E0-8E46-92AEDA6518C7} = {ED918024-B965-451F-8815-D25376175A8F}
+		{4555FC88-C160-4471-BD72-3ADB831447E6} = {98B2C3D8-7A8C-46E0-8E46-92AEDA6518C7}
+		{8665CA8E-044B-46BF-A8B6-4CAFDC46DBA1} = {98B2C3D8-7A8C-46E0-8E46-92AEDA6518C7}
 	EndGlobalSection
 EndGlobal
