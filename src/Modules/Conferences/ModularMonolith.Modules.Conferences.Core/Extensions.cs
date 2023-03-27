@@ -1,13 +1,12 @@
+using System.Runtime.CompilerServices;
 using Microsoft.Extensions.DependencyInjection;
 using ModularMonolith.Modules.Conferences.Core.DAL;
-using ModularMonolith.Modules.Conferences.Core.DAL.Repositories;
-using ModularMonolith.Modules.Conferences.Core.Repositories;
 using ModularMonolith.Modules.Conferences.Core.Services;
-using ModularMonolith.Shared.Infrastructure.Sqlite;
 
+[assembly:InternalsVisibleTo("ModularMonolith.Modules.Conferences.Api")]
 namespace ModularMonolith.Modules.Conferences.Core;
 
-public static class Extensions
+internal static class Extensions
 {
     public static IServiceCollection AddCore(this IServiceCollection services)
     {

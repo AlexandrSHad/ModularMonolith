@@ -9,4 +9,5 @@ public class Conference
     public string Location { get; set; } = String.Empty;
     public DateTime From { get; set; }
     public DateTime To { get; set; }
+    public int? ParticipantsLimit { get; set; }
 }

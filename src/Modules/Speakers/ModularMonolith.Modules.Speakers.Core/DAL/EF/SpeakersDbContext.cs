@@ -8,7 +8,7 @@ public class SpeakersDbContext : DbContext
 {
     public DbSet<Speaker> Speakers { get; set; }
 
-    public SpeakersDbContext(DbContextOptions options) : base(options)
+    public SpeakersDbContext(DbContextOptions<SpeakersDbContext> options) : base(options)
     {
     }
 

@@ -1,8 +1,10 @@
 using Microsoft.Extensions.Logging;
 using ModularMonolith.Modules.Conferences.Core.DTO;
 using ModularMonolith.Modules.Conferences.Core.Entities;
+using ModularMonolith.Modules.Conferences.Core.Events;
 using ModularMonolith.Modules.Conferences.Core.Exceptions;
 using ModularMonolith.Modules.Conferences.Core.Repositories;
+using ModularMonolith.Shared.Abstractions.Messaging;
 
 namespace ModularMonolith.Modules.Conferences.Core.Services;
 
@@ -10,15 +12,18 @@ internal class ConferenceService : IConferenceService
 {
     private readonly IConferenceRepository _conferenceRepository;
     private readonly IHostRepository _hostRepository;
+    private readonly IMessageBroker _messageBroker;
     private readonly ILogger<ConferenceService> _logger;
 
     public ConferenceService(
         IConferenceRepository conferenceRepository,
         IHostRepository hostRepository,
+        IMessageBroker messageBroker,
         ILogger<ConferenceService> logger)
     {
         _conferenceRepository = conferenceRepository;
         _hostRepository = hostRepository;
+        _messageBroker = messageBroker;
         _logger = logger;
     }
 
@@ -36,9 +41,10 @@ internal class ConferenceService : IConferenceService
         Map(conference, dto);
         await _conferenceRepository.AddAsync(conference);
 
+        await _messageBroker.PublishAsync(new ConferenceCreated(dto.Id, dto.Name, dto.ParticipantsLimit));
+
         _logger.LogInformation(
-            "Created a conference {Name} with ID '{Id}': {dto}",
-            dto.Name, dto.Id, dto); // check this out
+            "Created a conference {Name} with ID '{Id}'", dto.Name, dto.Id);
     }
 
     public async Task<ConferenceDetailsDto?> GetAsync(Guid id)
@@ -64,8 +70,7 @@ internal class ConferenceService : IConferenceService
         await _conferenceRepository.UpdateAsync(conference);
         
         _logger.LogInformation(
-            "Updated a conference {Name} with ID '{Id}': {dto}",
-            dto.Name, dto.Id, dto); // check this out
+            "Updated a conference {Name} with ID '{Id}'", dto.Id);
     }
 
     public async Task DeleteAsync(Guid id)
@@ -75,8 +80,7 @@ internal class ConferenceService : IConferenceService
         await _conferenceRepository.DeleteAsync(conference);
         
         _logger.LogInformation(
-            "Deleted a conference {Name} with ID '{Id}': {dto}",
-            conference.Name, conference.Id, conference); // check this out
+            "Deleted a conference {Name} with ID '{Id}'", conference.Name, conference.Id);
     }
 
     private async Task<Conference> GetConferenceAsync(Guid id)
@@ -100,6 +104,7 @@ internal class ConferenceService : IConferenceService
         conference.Location = dto.Location;
         conference.From = dto.From;
         conference.To = dto.To;
+        conference.ParticipantsLimit = dto.ParticipantsLimit;
     }
 
     private static T Map<T>(Conference conference) where T : ConferenceDto, new()
@@ -110,7 +115,8 @@ internal class ConferenceService : IConferenceService
             Name = conference.Name,
             Location = conference.Location,
             From = conference.From,
-            To = conference.To
+            To = conference.To,
+            ParticipantsLimit = conference.ParticipantsLimit
         };
 
     private static ConferenceDetailsDto MapDetails(Conference conference)

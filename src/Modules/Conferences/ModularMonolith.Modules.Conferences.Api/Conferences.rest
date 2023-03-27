@@ -1,6 +1,7 @@
 @url = http://localhost:5000/conferences-module
-@hostId = d2cf6916-9685-4db5-8a40-b29e4a0f134d
-@conferenceId = 9d441c33-fe9d-460f-aacd-950ae697f974
+@hostId = df582ca8-a0b9-4009-9510-97e00f873c87
+
+@conferenceId = fc24a835-f022-48fe-9eaf-6f71a9e47cec
 
 ###
 GET {{url}}
@@ -52,7 +53,8 @@ Content-Type: application/json
     "description": "Conference of the Host 1",
     "location": "Test street 123",
     "from": "2023-05-01",
-    "to": "2023-05-03"
+    "to": "2023-05-03",
+    "participantsLimit": 100
 }
 
 ###

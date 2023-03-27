@@ -9,7 +9,7 @@ public class ConferencesDbContext : DbContext
     public DbSet<Conference> Conferences { get; set; }
     public DbSet<Host> Hosts { get; set; }
 
-    public ConferencesDbContext(DbContextOptions options) : base(options)
+    public ConferencesDbContext(DbContextOptions<ConferencesDbContext> options) : base(options)
     {
     }
 

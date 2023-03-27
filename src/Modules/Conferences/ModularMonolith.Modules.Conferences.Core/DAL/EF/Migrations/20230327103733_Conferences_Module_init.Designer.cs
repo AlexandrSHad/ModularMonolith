@@ -11,7 +11,7 @@ using ModularMonolith.Modules.Conferences.Core.DAL;
 namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
 {
     [DbContext(typeof(ConferencesDbContext))]
-    [Migration("20230323184207_Conferences_Module_init")]
+    [Migration("20230327103733_Conferences_Module_init")]
     partial class Conferences_Module_init
     {
         /// <inheritdoc />
@@ -45,6 +45,9 @@ namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<int?>("ParticipantsLimit")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("To")
                         .HasColumnType("TEXT");

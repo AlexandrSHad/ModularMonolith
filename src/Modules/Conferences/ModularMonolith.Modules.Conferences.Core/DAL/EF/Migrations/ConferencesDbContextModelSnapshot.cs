@@ -43,6 +43,9 @@ namespace ModularMonolith.Modules.Conferences.Core.DAL.EF.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("ParticipantsLimit")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("To")
                         .HasColumnType("TEXT");
 
