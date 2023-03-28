@@ -6,10 +6,17 @@ namespace ModularMonolith.Shared.Infrastructure.Messaging;
 internal sealed class InMemoryMessageBroker : IMessageBroker
 {
     private readonly IModuleClient _moduleClient;
+    private readonly IAsynchronousDispatcher _asynchronousDispatcher;
+    private readonly MessagingOptions _messagingOptions;
 
-    public InMemoryMessageBroker(IModuleClient moduleClient)
+    public InMemoryMessageBroker(
+        IModuleClient moduleClient,
+        IAsynchronousDispatcher asynchronousDispatcher,
+        MessagingOptions messagingOptions)
     {
         _moduleClient = moduleClient;
+        _asynchronousDispatcher = asynchronousDispatcher;
+        _messagingOptions = messagingOptions;
     }
 
     public async Task PublishAsync(params IMessage[] messages)
@@ -21,7 +28,9 @@ internal sealed class InMemoryMessageBroker : IMessageBroker
             return;
         }
         
-        var tasks = messages.Select(x => _moduleClient.PublishAsync(x));
+        var tasks = messages.Select(x => _messagingOptions.UseBackgroundDispatcher
+            ? _asynchronousDispatcher.PublishAsync(x)
+            : _moduleClient.PublishAsync(x));
         await Task.WhenAll(tasks);
     }
 }

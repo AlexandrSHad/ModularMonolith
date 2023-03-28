@@ -1,5 +1,5 @@
 @url = http://localhost:5000/conferences-module
-@hostId = df582ca8-a0b9-4009-9510-97e00f873c87
+@hostId = 0d5cb9e6-146b-419f-bdab-6edcdd6a071c
 
 @conferenceId = fc24a835-f022-48fe-9eaf-6f71a9e47cec
 
@@ -19,7 +19,7 @@ POST {{url}}/hosts
 Content-Type: application/json
 
 {
-    "name": "Host 1",
+    "name": "Host 2",
     "description": "Description of the Host 1"
 }
 
@@ -49,7 +49,7 @@ Content-Type: application/json
 
 {
     "hostId": "{{hostId}}",
-    "name": "Conference 1",
+    "name": "Conference 4",
     "description": "Conference of the Host 1",
     "location": "Test street 123",
     "from": "2023-05-01",
